@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Truculenta:opsz,wght@12..72,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-truculenta;
+  }
+  .container {
+    @apply max-w-7xl w-full mx-auto px-4;
+  }
+  header {
+    @apply bg-semilight;
+  }
+  footer {
+    @apply bg-black/80 text-gray-200 py-10
+  }
+}
+@layer components {
+  .btn {
+    @apply bg-semilight rounded-full py-2 px-5 inline-block font-bold;
+  }
+  .header__wrapper {
+    @apply w-full flex justify-between items-center;
+  }
+  .navbar ul {
+    @apply flex gap-5;
+  }
+  .navbar ul li {
+    @apply text-xl font-bold;
+  }
+
+  .banner {
+    @apply py-8;
+  }
+  .banner__wrapper {
+    @apply grid grid-cols-1 xl:grid-cols-[2fr_1fr] justify-items-center;
+  }
+
+  .banner__image {
+    @apply flex justify-end w-[512px];
+  }
+  .banner__image img {
+    @apply object-contain w-full;
+  }
+  .banner__title__wrapper {
+    @apply mb-5;
+  }
+  .banner__title__wrapper h1 {
+    @apply text-5xl;
+  }
+  .banner__details p {
+    @apply w-full lg:w-[700px];
+  }
+
+
+  .about {
+    @apply bg-black/80 py-10;
+  }
+  h2 {
+    @apply w-full flex items-center text-primary text-4xl text-nowrap mb-6;
+  }
+  h2::before {
+    @apply content-[""] bg-primary w-[1130px] h-1 inline-block mx-2;
+  }
+  .h2-rtl {
+    @apply flex-row-reverse justify-end;
+  }
+  .about p {
+    @apply text-white text-justify;
+  }
+  .about__wrapper {
+    @apply flex flex-col md:flex-row items-center gap-10;
+  }
+  .about__description {
+    @apply flex flex-col gap-5;
+  }
+
+  .catalog {
+    @apply bg-semilight py-10;
+  }
+  .catalog__card {
+    @apply flex justify-evenly w-full flex-wrap gap-10;
+  }
+  .catalog__card__item {
+    @apply w-[367px] bg-white shadow-lg;
+  }
+  .catalog__card__item h4 {
+    @apply text-secondary text-3xl font-bold;
+  }
+  .catalog__card__item a {
+    @apply text-primary;
+  }
+  .talk-to-us {
+    @apply py-10 bg-primary;
+  }
+  .talk-to-us__details {
+    @apply flex flex-col items-center justify-center;
+  }
+  .talk-to-us__details h3 {
+    @apply font-bold text-3xl;
+  }
+  .footer {
+    @apply flex flex-col items-center md:justify-between md:flex-row
+  }
+  .icons ul {
+    @apply flex gap-5;
+  }
+}
