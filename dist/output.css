@@ -958,6 +958,29 @@ h2::before{
   color: rgb(27 139 131 / var(--tw-text-opacity, 1));
 }
 
+.latest-style{
+  background-color: rgb(0 0 0 / 0.8);
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.latest-style h3{
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(207 165 132 / var(--tw-text-opacity, 1));
+}
+
+.latest-style__item{
+  width: 367px;
+}
+
+.latest-style__wrapper{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .relative{
   position: relative;
 }
@@ -1009,16 +1032,8 @@ h2::before{
   grid-template-columns: 1fr 2fr;
 }
 
-.flex-row{
-  flex-direction: row;
-}
-
 .flex-col{
   flex-direction: column;
-}
-
-.items-center{
-  align-items: center;
 }
 
 .justify-center{
@@ -1064,29 +1079,14 @@ h2::before{
   line-height: 2rem;
 }
 
-.text-xl{
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
-.text-6xl{
-  font-size: 3.75rem;
-  line-height: 1;
-}
-
 .text-4xl{
   font-size: 2.25rem;
   line-height: 2.5rem;
 }
 
-.text-3xl{
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
-.text-5xl{
-  font-size: 3rem;
-  line-height: 1;
+.text-xl{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .font-bold{
@@ -1103,10 +1103,6 @@ h2::before{
 
 .leading-4{
   line-height: 1rem;
-}
-
-.tracking-widest{
-  letter-spacing: 0.1em;
 }
 
 .tracking-\[1rem\]{

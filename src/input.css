@@ -160,4 +160,17 @@
   .footer a {
     @apply hover:text-primary;
   }
+
+  .latest-style{
+    @apply bg-black/80 py-6
+  }
+  .latest-style h3{
+    @apply text-secondary font-bold text-2xl
+  }
+  .latest-style__item{
+    @apply w-[367px]
+  }
+  .latest-style__wrapper{
+    @apply grid grid-cols-3
+  }
 }
