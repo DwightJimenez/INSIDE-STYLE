@@ -565,8 +565,8 @@ body{
   margin-right: auto;
   width: 100%;
   max-width: 80rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 header{
@@ -812,7 +812,7 @@ footer{
   padding-bottom: 2.5rem;
 }
 
-h2{
+.custom-h2{
   margin-bottom: 1.5rem;
   display: flex;
   width: 100%;
@@ -824,7 +824,7 @@ h2{
   color: rgb(27 139 131 / var(--tw-text-opacity, 1));
 }
 
-h2::before{
+.custom-h2::before{
   margin-left: 0.5rem;
   margin-right: 0.5rem;
   display: inline-block;
@@ -962,6 +962,8 @@ h2::before{
   background-color: rgb(0 0 0 / 0.8);
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 .latest-style h3{
@@ -973,12 +975,33 @@ h2::before{
 }
 
 .latest-style__item{
-  width: 367px;
+  max-width: 367px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity, 1));
+}
+
+.latest-style__item-description{
+  padding: 1rem;
 }
 
 .latest-style__wrapper{
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+@media (min-width: 768px){
+  .latest-style__wrapper{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px){
+  .latest-style__wrapper{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 .relative{
@@ -998,6 +1021,10 @@ h2::before{
 .my-7{
   margin-top: 1.75rem;
   margin-bottom: 1.75rem;
+}
+
+.mb-4{
+  margin-bottom: 1rem;
 }
 
 .mb-5{
@@ -1028,12 +1055,24 @@ h2::before{
   max-width: 2.5rem;
 }
 
-.grid-cols-\[1fr_2fr\]{
-  grid-template-columns: 1fr 2fr;
+.max-w-\[\]{
+  max-width: ;
+}
+
+.max-w-\[310px\]{
+  max-width: 310px;
+}
+
+.flex-row{
+  flex-direction: row;
 }
 
 .flex-col{
   flex-direction: column;
+}
+
+.items-center{
+  align-items: center;
 }
 
 .justify-center{
@@ -1122,6 +1161,10 @@ h2::before{
 @media (min-width: 768px){
   .md\:max-w-xl{
     max-width: 36rem;
+  }
+
+  .md\:grid-cols-\[1fr_2fr\]{
+    grid-template-columns: 1fr 2fr;
   }
 }
 
